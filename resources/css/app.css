@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Updock&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+[x-cloak=""] { display: none; }
+
+@media screen and (max-width: 1024px) {
+    [x-cloak="mobile"] { display: none; }
+}
+
+@layer components {
+    .form-input {
+        @apply w-full px-4 py-1.5 font-medium rounded-lg focus:outline-none border text-sm border-gray-300 focus:border-gray-800 focus:ring-0 focus:ring-gray-800 placeholder-gray-400
+    }
+
+    .form-label {
+        @apply block text-sm font-semibold mb-1;
+    }
+
+    .form-mb {
+        @apply mb-5;
+    }
+
+    .form-error {
+        @apply text-red-500 font-medium text-sm mt-1;
+    }
+
+    .form-confirm-button {
+        @apply bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-lg;
+    }
+
+    .form-cancel-button {
+        @apply hover:bg-gray-200 border border-gray-300 font-bold px-4 py-2 rounded-lg;
+    }
+
+    .section-title {
+        @apply font-extrabold text-base xl:text-lg capitalize mb-5;
+    }
+
+    table {
+        @apply w-full table-auto;
+    }
+    
+    thead {
+        @apply font-bold text-gray-500;
+    }
+
+    .thead-td {
+        @apply px-1 pb-3 lg:px-4 border-b border-gray-100;
+    }
+
+    .thead-td-left {
+        @apply pr-1 pb-3 lg:pr-4 border-b border-gray-100;
+    }
+
+    .thead-td-right {
+        @apply pl-1 pb-3 lg:pl-4 border-b border-gray-100;
+    }
+
+    tbody {
+        @apply font-semibold;
+    }
+
+    .tbody-td {
+        @apply px-1 py-2.5 lg:px-4;
+    }
+    
+    .tbody-td-left {
+        @apply pr-1 py-2.5 lg:pr-4;
+    }
+
+    .tbody-td-right {
+        @apply pl-1 py-2.5 lg:pl-4;
+    }
+
+}
